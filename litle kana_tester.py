@@ -32,7 +32,9 @@ def test():
         word_asked = random.choice(clean_hiragana_list)
         print (word_asked)
         word_given = input("Type your solution: ")
-        if word_given == "end":
+        if len(word_given) <= 1:
+            print ("Try again...You gotta type in more OR the correct letters!!!")
+        elif word_given == "end":
             print ("See You soon!  Thanks for learning the hiragana!")
             break
         else:
@@ -60,3 +62,8 @@ def test():
 
 test()
 
+
+#Running issues to adress:
+# does produce correct result if eg ter for kana te is used
+# does not yet recognize chi or shi so far si for shi
+# produced error for に when typing sd
